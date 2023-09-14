@@ -8,7 +8,10 @@ const app = express();
 const PORT = 8080;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin:["https://novalty-ramprasadh019.vercel.app"],
+  methods:["POST", "GET","PUT","DELETE"],
+  credentials:true}));
 app.use(express.json());
 
 // Connect to MongoDB
